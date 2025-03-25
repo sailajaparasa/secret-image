@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Protected Image</title>
+    <script>
+        function checkPassword() {
+            // Set your desired password here
+            const correctPassword = "papaman_2627";
+            const userPassword = document.getElementById("password").value;
+
+            if (userPassword === correctPassword) {
+                document.getElementById("imageContainer").style.display = "block";
+                document.getElementById("passwordForm").style.display = "none";
+            } else {
+                alert("Incorrect password. Try again.");
+            }
+        }
+    </script>
+</head>
+<body>
+    <h2>Enter Password to View Image</h2>
+    
+    <div id="passwordForm">
+        <input type="password" id="password" placeholder="Enter password">
+        <button onclick="checkPassword()">Submit</button>
+    </div>
+
+    <!-- Image is hidden by default -->
+    <div id="imageContainer" style="display: none;">
+        <h3>Here is your secret image:</h3>
+        <img src="C:\Users\RGUKT\Pictures\Blue White Aesthetic Wedding Invitation_20250325_022644_0000 (1).png" alt="Secret Image">
+    </div>
+
+</body>
+</html>
